@@ -22,10 +22,12 @@ class Solution {
     for (int i = 0; i < s.length; i++) {
       String ch = s[i];
       if (ch == '*') {
+        //마지막 글자 제거 (pop)
         if (stack.isNotEmpty) {
           stack.removeLast();
         }
       } else {
+        //글자 추가(push)
         stack.add(ch);
       }
     }
